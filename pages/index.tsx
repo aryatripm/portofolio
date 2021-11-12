@@ -4,15 +4,17 @@ import Navbar from "../src/component/navbar"
 import Main from "../src/component/main"
 import Contact from "../src/component/contact";
 import About from "../src/component/about";
+import Footer from "../src/component/footer";
 
 const IndexPage = () => (
   <Container maxW="container.xl" p={0}>
     <Navbar />
-    <Flex h={{ base: 'auto', md: '91vh' }} py={[0, 1, 2]} direction={{ base: 'column', md: 'row' }}>
+    <Flex maxW='full' h={{ base: 'auto', xl: 'auto' }} py={0} direction={{ base: 'column', xl: 'row' }}>
       <About />
       <Main />
       <Contact />
     </Flex>
+    <Footer />
   </Container>
 );
 

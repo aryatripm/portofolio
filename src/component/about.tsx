@@ -20,7 +20,7 @@ const About = () => {
 
     const [slider, setSlider] = React.useState<Slider | null>(null);
 
-    const top = useBreakpointValue({ base: '90%', md: '50%' });
+    const top = useBreakpointValue({ base: '50%', md: '50%' });
     const side = useBreakpointValue({ base: '10%', md: '10%' });
 
     const cards = [
@@ -41,9 +41,9 @@ const About = () => {
     ];
 
     return (
-        <VStack w="full" h="full" p={10} spacing={5} alignItems="center" order={{ base: 2, md: 1 }}>
+        <VStack w="full" h="full" p={4} spacing={8} alignItems="center" order={{ base: 2, xl: 1 }}>
             <Center>
-                <Box role={'group'} p={6} minH={36} maxW={96} w={96} bg={useColorModeValue('white', 'gray.800')} boxShadow={'2xl'} rounded={'lg'} pos={'relative'} zIndex={1}>
+                <Box p={6} minH={36} maxW={96} w={96} bg={useColorModeValue('gray.200', 'gray.700')} boxShadow={'2xl'} rounded={'2xl'}  >
                     <UnorderedList>
                         <ListItem>Lorem ipsum dolor sit amet</ListItem>
                         <ListItem>Consectetur adipiscing elit</ListItem>
@@ -52,7 +52,7 @@ const About = () => {
                 </Box>
             </Center>
             <Center>
-                <Box role={'group'} p={6} maxW={96} w={'full'} bg={useColorModeValue('white', 'gray.800')} boxShadow={'2xl'} rounded={'lg'} pos={'relative'} zIndex={1}>
+                <Box p={6} maxW={96} w={'full'} bg={useColorModeValue('gray.200', 'gray.700')} boxShadow={'2xl'} rounded={'2xl'}  >
                     <Box
                         position={'relative'}
                         height={'full'}
@@ -101,6 +101,7 @@ const About = () => {
                                     key={index}
                                     maxH={80}
                                     w="full"
+                                    rounded={'2xl'}
                                     position="relative"
                                     backgroundPosition="center"
                                     backgroundRepeat="no-repeat"
