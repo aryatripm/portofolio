@@ -7,13 +7,22 @@ import {
     useColorModeValue
 } from "@chakra-ui/react";
 
+import dynamic from 'next/dynamic';
+
 import { ChevronDownIcon } from '@chakra-ui/icons'
 
+
+const Char = dynamic(
+    () => import('./Arya'),
+    { ssr: false }
+)
 
 const Main = () => {
     return (
         <VStack w="full" h="full" p={4} spacing={5} alignItems="center" order={{ base: 1, xl: 2 }}>
-            <Circle size={250} bg={useColorModeValue('gray.200', 'gray.700')} ></Circle>
+            <Circle size={250} bg={useColorModeValue('gray.200', 'gray.700')} >
+                <Char />
+            </Circle>
             <VStack alignItems="center" spacing={0}>
                 <Heading>Arya Majiah</Heading>
             </VStack>
