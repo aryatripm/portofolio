@@ -29,10 +29,10 @@ const Contact = () => {
                 <Box w={96} bg={useColorModeValue('gray.200', 'gray.700')} boxShadow={'2xl'} rounded={'2xl'} p={6} overflow={'hidden'}>
                     <VStack spacing={2}>
                         <FormControl id="email">
-                            <Input type="text" placeholder="Email" variant='filled' focusBorderColor='purple.700' rounded='full' _hover={{ bgColor: useColorModeValue('gray.300', 'gray.600') }} />
+                            <Input type="text" placeholder="Email" variant='filled' focusBorderColor='purple.700' rounded='full' _hover={{ transform: 'translateY(-2px)', boxShadow: 'lg' }} />
                         </FormControl>
                         <FormControl id="msg">
-                            <Textarea placeholder="Message" rows={6} variant='filled' focusBorderColor='purple.700' rounded='3xl' _hover={{ bgColor: useColorModeValue('gray.300', 'gray.600') }} />
+                            <Textarea placeholder="Message" rows={6} variant='filled' focusBorderColor='purple.700' rounded='3xl' _hover={{ transform: 'translateY(-2px)', boxShadow: 'lg' }} />
                         </FormControl>
                         <FormControl id="btn-submit">
                             <Button

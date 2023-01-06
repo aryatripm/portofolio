@@ -53,8 +53,24 @@ const Arya: React.FC = () => {
             camera.lookAt(target);
             setCamera(camera);
 
-            const ambientLight = new THREE.AmbientLight(0xcccccc, 0.8);
-            scene.add(ambientLight);
+            // const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+            // scene.add(ambientLight);
+
+            const width = 10;
+            const height = 10;
+            const intensity = 2;
+            const rectLight1 = new THREE.RectAreaLight(0xffffff, intensity, width, height);
+            const rectLight2 = new THREE.RectAreaLight(0xffffff, intensity, width, height);
+            const rectLight3 = new THREE.RectAreaLight(0xffffff, intensity, width, height);
+            rectLight1.position.set(5, 0, -3);
+            rectLight2.position.set(7, 0, 7);
+            rectLight3.position.set(-5, 0, 5);
+            rectLight1.lookAt(target);
+            rectLight2.lookAt(target);
+            rectLight3.lookAt(target);
+            scene.add(rectLight1)
+            scene.add(rectLight2)
+            scene.add(rectLight3)
 
             const controls = new OrbitControls(camera, renderer.domElement);
             controls.autoRotate = true;
@@ -78,7 +94,7 @@ const Arya: React.FC = () => {
 
                 if (frame <= 100) {
                     const p = initialCameraPosition;
-                    const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20;
+                    const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 30;
 
                     camera.position.y = 0;
                     camera.position.x = p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed);

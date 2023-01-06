@@ -43,11 +43,10 @@ const About = () => {
     return (
         <VStack w="full" h="full" p={4} spacing={8} alignItems="center" order={{ base: 2, xl: 1 }}>
             <Center>
-                <Box p={6} minH={36} maxW={96} w={96} bg={useColorModeValue('gray.200', 'gray.700')} boxShadow={'2xl'} rounded={'2xl'}  >
+                <Box p={6} minH={36} maxW={96} w={96} bg={useColorModeValue('gray.200', 'gray.700')} boxShadow={'2xl'} rounded={'2xl'} >
                     <UnorderedList>
-                        <ListItem>Lorem ipsum dolor sit amet</ListItem>
-                        <ListItem>Consectetur adipiscing elit</ListItem>
-                        <ListItem>Integer molestie lorem at massa</ListItem>
+                        <ListItem>2002 - Born</ListItem>
+                        <ListItem>2020 - Maranatha Christian University</ListItem>
                     </UnorderedList>
                 </Box>
             </Center>
